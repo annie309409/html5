@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>hello world</title>
+        <style>
+            #myCanvas{
+                border: 1px solid red;
+            }
+        </style>
+    </head>
+    <body>
+      <h1 style="color: rebeccapurple">hello world</h1>
+      <h1>헬로, 월드</h1>
+      <p>하러아허아러히라어히ㅏㅇ러ㅣㅏ헝라ㅓ항러허이ㅏㅓ</p>
+      <h5>중간테스트</h5>
+      <!--  이것은 주석아닌 주석입니다.    -->
+      <!--  주석인것 같지만 주석아님   -->
+      <canvas id="myCanvas" width="200" height="100"></canvas>
+        <script>
+            const canvas =  document.querySelector('#myCanvas');
+            const context = canvas.getContext('2d');
+            context.moveTo(0,0);
+            context.lineTo(200,120);
+            context.stroke();
+        </script>
+    </body>
+</html>
