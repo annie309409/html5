@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입폼</title>
+    <style>
+        form{
+            background-color: #efefef;
+            padding: 20px 5px 40px;
+            max-width: 940px;
+        }
+        table td:nth-of-type(1){
+            width: 20%;
+            text-align: right;
+            font-size: 14px;
+            line-height: 30px;
+            min-width: 111px;
+        }
+        table td:nth-of-type(2){
+            padding-left: 20px;
+        }
+        table td:nth-of-type(2) span{
+            font-size: 12px;
+        }
+        table td:nth-of-type(2) input{
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            line-height: 20px;
+            padding-left: 5px;
+        }
+        table td:nth-of-type(2) select{
+            height: 23px;
+            padding-left: 5px;
+        }
+        table td:nth-of-type(2) img{
+            width: 50%;
+        }
+        button{
+            font-size: 12px;
+            line-height: 20px;
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+            min-width: 111px;
+        }
+        button span{
+            width: 15px;
+            display: inline-block;
+            height: 15px;
+            line-height: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            color: #000;
+            margin-right: 5px;
+        }
+        table tr:nth-last-of-type(1) td{
+            text-align: left;
+        }
+        table tr:nth-last-of-type(1) td button{
+            width: 30%;
+            border-radius: 5px;
+            line-height: 30px;
+            min-width: 150px;
+        }
+        table tr:nth-last-of-type(1) td button:nth-of-type(1){
+            background-color: cadetblue;
+            border: 0;
+        }
+        table tr:nth-last-of-type(1) td button:nth-of-type(2){
+            background-color: crimson;
+            border: 0;
+        }
+        
+        @media (max-width: 720px) and ( min-width: 0px) {
+            table td:nth-of-type(2) span{
+                font-size: 10px;
+                display: block;
+            }
+            table td:nth-of-type(2) button span{
+                font-size: 10px;
+                display: inline-block;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>일반회원</h1>
+    <form method="get">
+        <fieldset>
+
+            <table>
+                <tr>
+                    <td><label for="name">이름</label> </td>
+                    <td><input type="text" id="name" name="name" disabled></td>
+                </tr>
+                <tr>
+                    <td><label for="idnum">주민등록번호</label></td>
+                    <td><input type="text" id="idnum" disabled>-<input type="text" disabled></td>
+                </tr>
+                <tr>
+                    <td><label for="user_id">아이디</label></td>
+                    <td>
+                        <input type="text" id="user_id" name="user_id">
+                        <span>6~16자의 영문소문자, 숫자와 특수기호(_)만 사용할 수 있습니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="passwd">비밀번호</label></td>
+                    <td>
+                        <input type="password" id="passwd" name="passwd">
+                        <span>6~16자의 영문소문자, 숫자와 특수기호만 사용할 수 있습니다.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="passwd_ch">비밀번호 확인</label></td>
+                    <td>
+                        <input type="password" id="passwd_ch" name="passwd_ch">
+                        <span>이전항목에서 입력했던 비밀번호를 한번 더 입력하세요</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="zip01">우편번호</label></td>
+                    <td>
+                        <input type="text" id="zip01" maxlength="3" size="2">-<input type="text"  id="zip02" maxlength="3" size="2">
+                        <button><span>?</span>우편번호 찾기</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="addr1">주소</label></td>
+                    <td><input type="text" id="addr1"><input type="text" id="addr2"></td>
+                </tr>
+                <tr>
+                    <td><label for="mail">전자우편주소</label></td>
+                    <td>
+                        <input type="text" id="mail" name="email"> @ <input type="text"  id="mail2" name="email">
+                        <select name="email_last" id="email_last">
+                            <option>선택하세요</option>
+                            <option>naver.com</option>
+                            <option>gmail.com</option>
+                            <option>daum.net</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="dial">개인연락처</label></td>
+                    <td>
+                        <select name="dial" id="dial">
+                            <option>국번</option>
+                            <option>02</option>
+                            <option>031</option>
+                            <option>043</option>
+                        </select>-
+                        <input type="text" maxlength="4" id="ph">-
+                        <input type="text" maxlength="4" id="ph1">
+                    </td>
+                </tr>
+                <tr>
+                    <td>자동가입방지</td>
+                    <td>
+                        <div>
+                            <img src="./img/jadong.png" alt="">
+                        </div>
+                        <div>
+                            <input type="text">
+                            <button><span>?</span>다른 capche보기</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="submit">⩗ 입력완료</button>
+                        <button type="reset">X 취소하기</button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+    </form>
+</body>
+</html>
