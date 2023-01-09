@@ -7,6 +7,16 @@
         label{
             font-weight: 700;
         }
+        div span {
+            font-weight: 700;
+        }
+        div:nth-last-of-type(2) label, div:nth-last-of-type(3) label{
+            font-weight: 400;
+        }
+        input:invalid{
+            background-color: aquamarine;
+
+        }
     </style>
 </head>
 <body>
@@ -80,6 +90,7 @@
         </fieldset>
     </form>
 
+    https://www.google.com/search?q=js+foreach+if%EB%AC%B8&ei=zHa7Y6WKHYuN-AbOk4KIDw&ved=0ahUKEwiloObLs7n8AhWLBt4KHc6JAPEQ4dUDCA8&uact=5&oq=js+foreach+if%EB%AC%B8&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQogQyBQgAEKIEMgUIABCiBDIHCAAQHhCiBDIFCAAQogQ6CggAEEcQ1gQQsAM6BQgAEIAEOgkIABAIEB4Q8QQ6CQgAEAcQHhDxBEoECEEYAEoECEYYAFCSCli_F2DOGWgFcAF4AIABgQGIAb0HkgEDMi43mAEAoAEByAEKwAEB&sclient=gws-wiz-serp
     <h2>다양한 input태그</h2>
     <p>html5에서는 다양한 input요소 태그를 사용해서</p>
     <ul>
@@ -104,31 +115,113 @@
         <li>label : 폼 요소에 제목을 작성할때 사용</li>
     </ul>
 
-
-
-    <form action="login.do" method="post">
-        <fieldset>
-            <legend>개인 정보 입력</legend>
-            <!-- 보낸 데이터가 각 무엇인지 알수있어야함 그걸 name으로 구분 -->
-            <div><label for="usname">이름 : </label> <input type="text" id="usname" name="username"></div>
-            <div><label for="usid5">주민번호 : </label> <input type="text" id="usid5" name="userid_id"></div>
-            <div><label for="usid6">아이디 : </label> <input type="text" id="usid6" name="userid_idr"></div>
-            <div><label for="usporw">패스워드 : </label> <input type="password" id="usporw" name="uspwed"></div>
-            <div>성별: <label for="ch_male">남</label><input type="radio" id="ch_male" name="ch_gen"> <label for="ch_female">여</label><input type="radio" id="ch_female" name="ch_gen"></div>
-            <div>관심사: <label for="ch_01">연예</label><input type="checkbox" id="ch_01" name="ch_ins">
-                <label for="ch_02">스포츠</label><input type="checkbox" id="ch_02" name="ch_ins">
-                <label for="ch_03">IT</label><input type="checkbox" id="ch_03" name="ch_ins">
-            </div>
+    <form action="login.do" method="get">
+            <fieldset>
+                <legend>개인 정보 입력</legend>
+                <!-- 보낸 데이터가 각 무엇인지 알수있어야함 그걸 name으로 구분 -->
+                <div><label for="usname">이름 : </label> <input type="text" id="usname" name="username"></div>
+                <div><label for="usid5">주민번호 : </label> <input type="text" id="usid5" name="userid_id"></div>
+                <div><label for="usid6">아이디 : </label> <input type="text" id="usid6" name="userid_idr"></div>
+                <div><label for="usporw">패스워드 : </label> <input type="password" id="usporw" name="uspwed"></div>
+                <div>
+                    <span>성별:</span>
+                    <label for="ch_male">남</label><input type="radio" id="ch_male" name="ch_gen" value="male">
+                    <label for="ch_female">여</label><input type="radio" id="ch_female" name="ch_gen" value="female">
+                </div>
+                <div><span>관심사:</span> <label for="ch_01">연예</label><input type="checkbox" id="ch_01" name="ch_ins" value="entertain">
+                    <label for="ch_02">스포츠</label><input type="checkbox" id="ch_02" name="ch_ins" value="sports">
+                    <label for="ch_03">IT</label><input type="checkbox" id="ch_03" name="ch_ins" value="IT">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>추가정보</legend>
+                <div>
+                    <label for="email1">이메일 : </label><input type="text" name="email" id="email1">@
+                    <select name="" id="">
+                        <option>--선택하세요!</option>
+                        <option>naver.com</option>
+                        <option>google.com</option>
+                        <option>daum.net</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="addr">주소 : </label><input type="text" name="email" id="addr">
+                    <select name="sido" id="sido">
+                        <option>--선택하세요!</option>
+                        <option>서울</option>
+                        <option>경기</option>
+                        <option>인천</option>
+                    </select>
+                    <select name="gugun" id="gugun">
+                        <option>--선택하세요!</option>
+                        <option>강서구</option>
+                        <option>양천구</option>
+                        <option>마포구</option>
+                    </select>
+                    <select name="dong" id="dong">
+                        <option>--선택하세요!</option>
+                        <option>화곡동</option>
+                        <option>양평동</option>
+                        <option>연남동</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="intro">가입인사</label>
+                    <textarea id="intro" cols="45" rows="5"></textarea>
+                </div>
+                <div for="icon">
+                    <label for="icon">아이콘</label>
+                    <input type="file" name="icon" id="icon">
+                </div>
+                <div>
+                    <label for="">자동가입방지</label>
+                    <img src="./img/captcha.png" alt="">
+                </div>
+            </fieldset>
             <div>
                 <button type="submit">submit</button>
                 <button type="reset">reset</button>
             </div>
-
-        </fieldset>
     </form>
 
-    <form action="" method="">
-        from태그 안 내용
+    <h2>공통 input 속성</h2>
+    <p>readonly : 폼 요소에 값을 수정하지 못하게 막음</p>
+    <p>disable : 폼 요소가 서버로 전송되지 못하게 막음</p>
+    <p>placeholder : 폼 요소내에 레이블을 표시할 수 있게해줌 </p>
+    <p>size,maxlength: 폼 요소의 너비와 입력가능 최대 글자수를 지정</p>
+    <p>required : 폼 요소에 반드시 값을 입력하게끔 함</p>
+    <form action="">
+        <div>
+            <label for="jumin1">주민번호1</label>
+<!--            readonly추가시 수정이 불가능함-->
+            <input type="text" name="jumin" id="jumin1" value="112323-1*****" readonly>
+        </div>
+        <div>
+            <label for="jumin2">주민번호2</label>
+<!--            readonly추가시 수정이 불가능함-->
+            <input type="text" name="jumin2"  id="jumin2" value="112323-1*****" disabled>
+        </div>
+        <div>
+            <label for="jumin3">주민번호3</label>
+<!--            readonly추가시 수정이 불가능함-->
+            <input type="text" name="jumin3" id="jumin3" placeholder="123112-1#####" required>
+        </div>
+        <div>
+            <label for="userid5">아이디</label>
+<!--            readonly추가시 수정이 불가능함-->
+            <input type="text" name="userid5" id="userid5" maxlength="15">
+        </div>
+        <div>
+            <label for="userid5">우편번호</label>
+<!--            readonly추가시 수정이 불가능함-->
+            <input type="text" name="zip1" id="zip1" maxlength="3" size="3"> -
+            <input type="text" name="zip1" id="zip2" maxlength="3" size="3">
+        </div>
+        <div>
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
+        </div>
     </form>
+
 </body>
 </html>
