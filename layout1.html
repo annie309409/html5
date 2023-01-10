@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>shopping mall</title>
+    <meta name="keywords" content="쇼핑, 쇼핑몰">
+    <meta name="description" content="쇼핑을 위한 쇼핑에의한 쇼핑몰">
     <style>
         html,body,div,h1,h2,h3,h4,a,p,li,ul{
             margin: 0;
@@ -108,6 +110,15 @@
             width: 78%;
             position: relative;
         }
+        .mnWrap main .mnGroup{
+            width: 400%;
+            display: flex;
+            transition: margin-left 0.5s;
+        }
+        .mnWrap main .mnGroup img{
+            width: 25%;
+        }
+
         .mnWrap main .pg{
             width: 20%;
             height: 20px;
@@ -124,6 +135,10 @@
             width: calc(25% - 5px);
             text-align: center;
             cursor: pointer;
+        }
+        .mnWrap main .pg li.on{
+            background-color: #fff;
+            color: #000;
         }
         .mnWrap img{
             width: 100%;
@@ -192,7 +207,7 @@
         <header>
             <div class="hdrLeft">
                 <h1>logo</h1>
-                <h4><a href="">login</a> or <a href="">create account</a></h4>
+                <h4><a href="">login</a> or <a href="./09join.html">create account</a></h4>
             </div>
             <nav>
                 <h4>contact</h4>
@@ -232,14 +247,14 @@
                 </ul>
             </aside>
             <main>
-                <ul class="mnGroup">
-                    <img src="./img/main01.jpg" alt="">
-                    <img src="./img/main02.jpg" alt="">
-                    <img src="./img/main03.jpg" alt="">
-                    <img src="./img/main04.jpg" alt="">
-                </ul>
+                <div class="mnGroup">
+                    <img src="./img/main01.jpg" alt="이미지사진1">
+                    <img src="./img/main02.jpg" alt="이미지사진2">
+                    <img src="./img/main03.jpg" alt="이미지사진3">
+                    <img src="./img/main04.jpg" alt="이미지사진4">
+                </div>
                 <ul class="pg">
-                    <li>1</li>
+                    <li class="on">1</li>
                     <li>2</li>
                     <li>3</li>
                     <li>4</li>
@@ -305,5 +320,19 @@
             </nav>
         </footer>
     </div>
+    <script>
+        const menu = document.querySelectorAll('ul.pg li');
+        const sligr = document.querySelector('div.mnGroup');
+
+        menu.forEach((c,idx)=>{
+            c.onclick=(k)=>{
+                sligr.style.marginLeft=idx*-100+'%';
+                menu.forEach(j=>j.classList.remove('on'));
+                k.currentTarget.className='on';
+
+            }
+        })
+
+    </script>
 </body>
 </html>
