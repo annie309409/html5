@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body,div,h1,h2,h3,h4,a,p,li,ul{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        a{
+            color: #000;
+        }
+        ul{ list-style: none;}
+        .hdrWrap header{
+            width: 90%;
+            max-width: 1080px;
+            margin: 20px auto 0px;
+            display: flex;
+            justify-content: space-between;
+        }
+        header .hdrLeft{
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+        }
+        header .hdrLeft h1{
+            font-size: 26px;
+            width: 50%;
+            line-height: 80px;
+            background-color: #cccccc;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        header .hdrLeft h4{
+            padding-top: 60px;
+
+        }
+        header nav{
+            display: flex;
+            padding: 30px 0px;
+
+        }
+        header nav h4{
+            padding: 0px 20px;
+            text-transform: capitalize;
+            border-right: 1px solid #000;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        header nav h4:last-child{
+            padding-right:0px;
+            border-right: 0px;
+        }
+        .srhWrap{
+            background-color: #cccccc;
+            margin-top: 20px;
+            padding: 10px 0;
+        }
+        .srhWrap .search{
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        .srhWrap .search input{
+            line-height: 20px;
+            width: 20%;
+        }
+        .srhWrap .search select{
+            height: 25px;
+            width: 15%;
+        }
+        .srhWrap .search button{
+            width: 15%;
+            height: 25px;
+            text-transform: uppercase;
+        }
+        .mnWrap{
+            margin-top: 10px;
+        }
+        .mnWrap .mnGr{
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .mnWrap aside{
+            width: 20%;
+            line-height: 40px;
+            border: 2px solid #000;
+        }
+        .mnWrap aside h4{
+            padding-left: 20px;
+            text-transform: capitalize;
+        }
+        .mnWrap aside ul li{
+            border-top: 1px solid #000;
+            padding-left: 20px;
+            text-transform: capitalize;
+        }
+        .mnWrap main{
+            height: 280px;
+            overflow: hidden;
+            width: 78%;
+            position: relative;
+        }
+        .mnWrap main .pg{
+            width: 20%;
+            height: 20px;
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .mnWrap main .pg li{
+            background-color: #000000;
+            color: #fff;
+            width: calc(25% - 5px);
+            text-align: center;
+            cursor: pointer;
+        }
+        .mnWrap img{
+            width: 100%;
+        }
+
+        .content{
+            width: 90%;
+            max-width: 1080px;
+            margin: 20px auto 0px;
+        }
+        .content header h2{
+            line-height: 40px;
+            text-transform: capitalize;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .content section{
+            display: flex;
+            justify-content: space-between;
+        }
+        .content section article{
+            width: calc(100% / 6 - 20px);
+        }
+        article .image{
+            background-color: #cccccc;
+            height: 100px;
+            border-radius: 20px;
+        }
+        article h3{
+            text-align: center;
+            line-height: 40px;
+            text-transform: capitalize;
+        }
+        div.ftrWrap{
+            margin-top: 40px;
+            border-top: 2px solid #000;
+            padding-top: 40px;
+        }
+        footer{
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+            display: flex;
+            
+        }
+        footer nav{
+            margin-right: 40px;
+        }
+        footer nav h3{
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 20px;
+            font-size: 15px;
+        }
+        footer nav h4{
+            font-size: 12px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="hdrWrap">
+        <header>
+            <div class="hdrLeft">
+                <h1>logo</h1>
+                <h4><a href="">login</a> or <a href="">create account</a></h4>
+            </div>
+            <nav>
+                <h4>contact</h4>
+                <h4>store location</h4>
+                <h4>support</h4>
+                <h4>cart</h4>
+            </nav>
+        </header>
+    </div>
+    <div class="srhWrap">
+        <div class="search">
+            <form method="get">
+                <input type="text">
+                <select name="categoris" id="categories">
+                    <option value="">category</option>
+                    <option value="">caregory1</option>
+                    <option value="">caregory2</option>
+                    <option value="">caregory3</option>
+                    <option value="">caregory4</option>
+                    <option value="">caregory5</option>
+                </select>
+                <button type="submit">search</button>
+            </form>
+        </div>
+    </div>
+    <div class="mnWrap">
+        <div class="mnGr">
+            <aside>
+                <h4>all categories</h4>
+                <ul>
+                    <li>caregory1</li>
+                    <li>caregory2</li>
+                    <li>caregory3</li>
+                    <li>caregory4</li>
+                    <li>caregory5</li>
+                    <li>caregory6</li>
+                </ul>
+            </aside>
+            <main>
+                <ul class="mnGroup">
+                    <img src="./img/main01.jpg" alt="">
+                    <img src="./img/main02.jpg" alt="">
+                    <img src="./img/main03.jpg" alt="">
+                    <img src="./img/main04.jpg" alt="">
+                </ul>
+                <ul class="pg">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </main>
+        </div>
+    </div>
+    <div class="cntWrap">
+        <div class="content">
+            <header>
+                <h2>today's topic</h2>
+            </header>
+            <section>
+                <article>
+                    <div class="image"></div>
+                    <h3>product1</h3>
+                </article>
+                <article>
+                    <div class="image"></div>
+                    <h3>product2</h3>
+                </article>
+                <article>
+                    <div class="image"></div>
+                    <h3>product3</h3>
+                </article>
+                <article>
+                    <div class="image"></div>
+                    <h3>product4</h3>
+                </article>
+                <article>
+                    <div class="image"></div>
+                    <h3>product5</h3>
+                </article>
+                <article>
+                    <div class="image"></div>
+                    <h3>product6</h3>
+                </article>
+            </section>
+        </div>
+    </div>
+
+    <div class="ftrWrap">
+        <footer>
+            <nav>
+                <h3>about us</h3>
+                <h4>company</h4>
+                <h4>news</h4>
+                <h4>jobs</h4>
+                <h4>police</h4>
+                <h4>contact</h4>
+            </nav>
+            <nav>
+                <h3>social</h3>
+                <h4>facebook</h4>
+                <h4>twitter</h4>
+                <h4>try our app</h4>
+            </nav>
+            <nav>
+                <h3>service</h3>
+                <h4>FAQ</h4>
+                <h4>live support</h4>
+                <h4>stie map</h4>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
