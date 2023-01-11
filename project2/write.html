@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="hdrWrap">
+    <header>
+      <h1>JSP 프로젝트 v1</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html">home</a></li>
+          <li><a href="./join.html">회원가입</a></li>
+          <li><a href="./login.html">로그인</a></li>
+          <li><a href="./list.html">게시판</a></li>
+          <li><a href="./myinfo.html">회원정보</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+  <div class="cntWrap">
+    <div class="content">
+      <header>
+        <h2>새글쓰기</h2>
+      </header>
+      <section>
+        <form action="./list.html" method="get">
+          <table>
+            <tr>
+              <th><label for="title">제목</label></th>
+              <td><input type="text" name="title" id="title"></td>
+            </tr>
+            <tr>
+              <th><label for="newid">작성자</label></th>
+              <td><input type="text" value="siestageek" name="newid" id="newid" readonly></td>
+            </tr>
+            <tr>
+              <th><label for="viewnote">본문</label></th>
+              <td>
+                <textarea  name="viewnote" id="viewnote" cols="63" rows="17"></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button type="submit">입력완료</button>
+                <button type="reset">다시입력</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </section>
+    </div>
+  </div>
+  <div class="ftrWrap">
+    <footer>
+      <p>copy right &copy; 2023. annie. all rights reserved</p>
+    </footer>
+  </div>
+</body>
+</html>
