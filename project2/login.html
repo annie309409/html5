@@ -3,6 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        section{
+            width: 50%;
+            margin: 0 auto;
+        }
+        form div{
+            margin-top: 10px;
+        }
+        form div label{
+            display: inline-block;
+            width: 30%;
+            text-align: right;
+        }
+        form div label+input{
+            margin-left: 20px;
+            display: inline-block;
+        }
+        form button{
+            margin-left: calc(30% + 20px);
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <div class="hdrWrap">
@@ -26,7 +51,7 @@
               <h2>로그인</h2>
           </header>
           <section>
-              <form action="./index.html" method="get">
+              <form action="./myinfo.html" method="get">
                   <div>
                       <label for="userid">아이디</label><input type="text" id="userid" name="joinID">
                   </div>

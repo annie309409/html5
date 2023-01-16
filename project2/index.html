@@ -3,13 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>index</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/normalize.css.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <style>
+        .ftrWrap{
+            margin-top: 0;}
+        main img{
+            width: 0;
+            height: 0;
+            margin: -1px;
+            padding: -1px;
+        }
+        main .image{
+            height: 80vh;
+            margin: 0 auto;
+            background-image: url('./image/main01.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        main{
+            position: relative;
+        }
+        main h2{
+            position: absolute;
+            width: 50%;
+            height: 40px;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #fff;
+            line-height: 40px;
+            font-size: 72px;
+            text-transform: capitalize;
+            text-align: center;
+            text-shadow: 1px 1px 3px #333;
+        }
+    </style>
 </head>
 <body>
     <div class="hdrWrap">
         <header>
             <h1>JSP 프로젝트 v1</h1>
             <nav>
-                <ul>
+                <ul class="clearfix">
                     <li><a href="./index.html">home</a></li>
                     <li><a href="./join.html">회원가입</a></li>
                     <li><a href="./login.html">로그인</a></li>
@@ -21,7 +60,11 @@
     </div>
 
     <div class="mnWrap">
-        <main></main>
+        <main>
+            <div class="image"></div>
+            <img src="./image/main01.jpg" alt="메인이미지">
+            <h2>welcome!</h2>
+        </main>
     </div>
 
     <div class="ftrWrap">

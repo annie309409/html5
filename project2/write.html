@@ -3,6 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <style>
+    table{
+      width: 80%;
+      margin: 0 auto;
+      min-width: 650px;
+    }
+    table th{
+      width: 20%;
+    }
+    td input{
+      width: 98.5%;
+      line-height: 25px;
+      max-width: 493px;
+    }
+    th,td{
+      line-height: 40px;
+    }
+    table tr:last-child::before{
+      content: '';
+      display: table-cell;
+    }
+  </style>
 </head>
 <body>
   <div class="hdrWrap">
@@ -38,7 +63,7 @@
             <tr>
               <th><label for="viewnote">본문</label></th>
               <td>
-                <textarea  name="viewnote" id="viewnote" cols="63" rows="17"></textarea>
+                <textarea  name="viewnote" id="viewnote" cols="64" rows="17"></textarea>
               </td>
             </tr>
             <tr>
