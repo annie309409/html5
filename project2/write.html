@@ -7,26 +7,33 @@
   <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/common.css">
   <style>
-    table{
+    form{
       width: 80%;
       margin: 0 auto;
-      min-width: 650px;
     }
-    table th{
-      width: 20%;
+    form div{
+      margin-top: 10px;
     }
-    td input{
-      width: 98.5%;
-      line-height: 25px;
-      max-width: 493px;
+    form div label{
+      display: inline-block;
+      width: 15%;
+      text-align: right;
+      float: left;
     }
-    th,td{
-      line-height: 40px;
+    form div label+input, form div label+textarea{
+      margin-left: 20px;
+      width: 70%;
     }
-    table tr:last-child::before{
-      content: '';
-      display: table-cell;
+    form div label+textarea{
+      height: 250px;
     }
+    form div button:nth-of-type(1){
+      margin-left: calc(15% + 20px);
+    }
+    from div:nth-of-type(3) label{
+      margin-top: -200px;
+    }
+
   </style>
 </head>
 <body>
@@ -50,29 +57,23 @@
         <h2>새글쓰기</h2>
       </header>
       <section>
-        <form action="./list.html" method="get">
-          <table>
-            <tr>
-              <th><label for="title">제목</label></th>
-              <td><input type="text" name="title" id="title"></td>
-            </tr>
-            <tr>
-              <th><label for="newid">작성자</label></th>
-              <td><input type="text" value="siestageek" name="newid" id="newid" readonly></td>
-            </tr>
-            <tr>
-              <th><label for="viewnote">본문</label></th>
-              <td>
-                <textarea  name="viewnote" id="viewnote" cols="64" rows="17"></textarea>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2">
-                <button type="submit">입력완료</button>
-                <button type="reset">다시입력</button>
-              </td>
-            </tr>
-          </table>
+        <form action="./list.html" method="get" id="writefrm">
+          <div class="clearfix">
+            <label for="title">제목</label>
+            <input type="text" name="title" id="title">
+          </div>
+          <div class="clearfix">
+            <label for="newid">작성자</label>
+            <input type="text" value="siestageek" name="newid" id="newid" readonly>
+          </div>
+          <div class="clearfix">
+            <label for="viewnote">본문</label>
+            <textarea  name="viewnote" id="viewnote"></textarea>
+          </div>
+          <div>
+            <button type="submit">입력완료</button>
+            <button type="reset">다시입력</button>
+          </div>
         </form>
       </section>
     </div>
