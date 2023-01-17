@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>한국여행</title>
+    <meta name="keywords" content="한국여행, 일본여행, 동남아여행, 미국, 하와이">
+    <meta name="discription" content="1등 여행전문사이트">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,body,div,h1,h2,h3,h4,a,p,li,ul{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        a{
+            color: #000;
+        }
+        ul{ list-style: none;}
+        .hdrWrap{
+            background-color: #cccccc;
+        }
+        .hdrWrap header{
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+
+        }
+        .hdrWrap header::after{
+            content: '';
+            display: block;
+            clear: both;
+
+        }
+        h1{
+            font-size: 25px;
+            line-height: 120px;
+            text-shadow: 1px 2px 1px green;
+            font-weight: 700;
+            float: left;
+        }
+        nav{
+            width: 80%;
+            float: right;
+        }
+        nav>ul::after{
+            display: block;
+            content: '';
+            clear: both;
+
+        }
+        nav>ul>li{
+            float: left;
+            line-height: 60px;
+            background-color: #000000;
+            color: #fff;
+            width:25%;
+            text-align: center;
+            margin-top: 60px;
+            cursor: pointer;
+            position: relative;
+        }
+        div.ham{
+            display: none;
+        }
+
+        nav>ul>li ul{
+            height: 0px;
+            overflow: hidden;
+            background-color: rgba(0,0,0,0.8);
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            transition: height 0.5s;
+        }
+        nav>ul>li:hover ul{
+            height: 240px;
+        }
+        nav>ul>li ul li{
+            text-align: center;
+            width: 100%;
+        }
+        nav>ul>li ul li:hover{
+            background-color: rgba(255,255,255,0.8);
+            color: #000;
+        }
+
+        div.mnWrap{
+            background-image: url('./image/slides/img1.jpg');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: cover;
+            animation: ani 8s linear infinite;
+        }
+
+        @keyframes ani {
+            0%{
+                background-image: url('./image/slides/img1.jpg');
+            }
+            40%{
+                background-image: url('./image/slides/img2.jpg');
+            }
+            80%{
+                background-image: url('./image/slides/img3.jpg');
+            }
+            100%{
+                background-image: url('./image/slides/img1.jpg');
+
+            }
+        }
+
+
+        main{
+            padding: 200px 0;
+            text-align: center;
+            color: #fff;
+        }
+        main img{
+            width: 0;
+        }
+        main h2{
+            background-color: #333;
+            width: 20%;
+            margin: 0 auto;
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: 700;
+            min-width: 230px;
+        }
+        .cntWrap{
+            margin-top: 40px;
+        }
+        .content{
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        .content::after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+        .content section{
+            width: calc(100% / 3 - 20px);
+            float: left;
+            margin: 0 10px;
+        }
+        section h2{
+            line-height: 40px;
+            border-bottom: 2px solid #fc0;
+            font-size: 20px;
+        }
+        section h2:last-child{
+            border: 0;
+        }
+        section.notice li{
+            line-height: 30px;
+            font-size: 14px;
+            position:relative;
+        }
+        section.notice li span:last-child{
+            position: absolute;
+            right: 0;
+        }
+        section.notice li:nth-of-type(even){
+            background-color: #ffcc00;
+        }
+
+        .gallary .images{
+            justify-content: space-between;
+            padding-top: 15px;
+            height: 100px;
+            overflow: hidden;
+            padding-left: 10px;
+        }
+        .gallary .images::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .gallary .images a{
+            width: calc(100% / 3 );
+            float: left;
+        }
+
+        .go{
+            background-image: url('./image/Contents/shortcut.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            height: 160px;
+        }
+        .go h2{
+            width: 80%;
+            background-color: rgba(0,0,0,0.7);
+            position: absolute;
+            height: 40px;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: all 0.5s;
+        }
+        .go h2 a{
+            color: #fff;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+
+        }
+        .go h2:hover{
+            background-color: rgba(255,255,255,0.6);
+            color: #000;
+            box-shadow: 1px 1px 2px #333;
+        }
+        .go h2:hover a{
+            color: #000;
+        }
+        div.ftrWrap{
+            background-color: #cccccc;
+            margin-top:40px;
+        }
+        footer{
+            width: 90%;
+            max-width: 1080px;
+            margin: 0 auto;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+        footer::after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+        footer p{
+            line-height: 120px;
+            font-size: 25px;
+            float: left;
+        }
+        footer .sns{
+            float: right;
+        }
+        footer .sns .icons{
+            margin-top: 20px;
+        }
+        footer .sns .icons::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        footer .sns .icons li{
+            margin: 0px 10px;
+            float: left;
+        }
+        footer .sns select{
+            width: 100%;
+            height: 20px;
+            height: 30px;
+            margin-top: 10px;
+        }
+        select option{
+            line-height: 30px;
+            height: 30px;
+        }
+        @media (max-width: 952px) and (min-width: 1px) {
+            section.notice li span:last-child{
+                display: none;
+            }
+            .gallary .images{
+                padding-left: 0;
+                height: 105px;
+            }
+            .gallary .images a{
+                width: 100%;
+            }
+            .gallary .images a img{
+                width: 100%;
+            }
+            footer p{
+                font-size: 20px;
+            }
+            footer .sns .icons li{
+                width: calc(100% / 3 - 20px);
+            }
+            footer .sns .icons li img{
+                width: 100%;
+            }
+        }
+        @media (max-width: 723px) and (min-width: 1px) {
+            h1{
+                line-height: 50px;
+            }
+            nav{
+                position: relative;
+                right: 0;
+                top: 0;
+                width: 30%;
+                height: 50px;
+            }
+            nav>ul{
+                position: relative;
+            }
+            div.ham{
+                display: block;
+                font-size: 40px;
+                line-height: 50px;
+                position: absolute;
+                right: 0;
+
+            }
+            nav>ul{
+                background-color: rgba(0,0,0,0.8);
+                height: 100vh;
+                overflow: hidden;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 50%;
+                z-index: 9999;
+                transition: right 0.5s;
+            }
+            .ham.on+ul{
+                right: 0;
+            }
+            nav>ul::before{
+                content: 'X';
+                display: block;
+                color: #fff;
+                text-align: center;
+            }
+            nav>ul>li{
+                margin-top: 0;
+                background-color: transparent;
+                clear: both;
+                width: 100%;
+                line-height: 30px;
+            }
+            nav>ul>li ul{
+                height: 100%;
+                position: relative;
+                top: 0;
+                background-color: transparent;
+            }
+            nav>ul>li:hover ul{
+                height: 100%;
+                position: relative;
+                top: 0;
+            }
+            nav>ul>li ul li{
+                background-color: transparent;
+            }
+            main{
+                padding: 100px 0;
+            }
+            .cntWrap{
+                margin-top: 0;
+            }
+            .content section{
+                clear: both;
+                width: 100%;
+                margin: 20px 0 0;
+
+            }
+            .gallary .images a{
+                width: calc(100% / 3 - 20px);
+                margin: 0 15px;
+            }
+            .gallary .images a:nth-of-type(1){
+                margin-left: 0;
+            }
+            .gallary .images a:nth-of-type(3){
+                margin-right: 0;
+            }
+
+            .gallary .images{
+                height: 140px;
+            }
+            .go{
+                height: 140px;
+            }
+            footer p{
+                font-size: 14px;
+                line-height: 20px;
+                width: 100%;
+                text-align: center;
+            }
+            footer .sns{
+                clear: both;
+                width: 100%;
+            }
+            footer .sns .icons {
+                width: 50%;
+                margin: 20px auto 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--헤더-->
+<div class="hdrWrap">
+    <header>
+        <h1>한국투어</h1>
+        <nav>
+            <div class="ham">🍔</div>
+            <ul>
+                <li>해외여행
+                    <ul>
+                        <li>동남아/대만</li>
+                        <li>중국/홍콩</li>
+                        <li>유럽/두바이</li>
+                        <li>미주/하와이</li>
+                    </ul>
+                </li>
+                <li>국내여행
+                    <ul>
+                        <li>서울/경기</li>
+                        <li>강원/</li>
+                        <li>충청</li>
+                        <li>경상/전라</li>
+                    </ul>
+                </li>
+                <li>제주도
+                    <ul>
+                        <li>버스여행</li>
+                        <li>자유여행</li>
+                        <li>호텔/펜션</li>
+                    </ul>
+                </li>
+                <li>렌터카
+                    <ul>
+                        <li>국내 렌터카</li>
+                        <li>국외 렌터카</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</div>
+
+<!--메인-->
+<div class="mnWrap">
+    <main>
+        <h2>해외여행예약, 한국투어</h2>
+        <img src="./image/slides/img1.jpg" alt="">
+        <img src="./image/slides/img2.jpg" alt="">
+        <img src="./image/slides/img3.jpg" alt="">
+
+    </main>
+</div>
+
+<div class="cntWrap">
+    <div class="content">
+        <section class="notice">
+            <h2>공지사항</h2>
+            <ul>
+                <li><span>한국투어 홈페이지 개편안내</span> <span>2022.03.01</span></li>
+                <li><span>여행 이벤트 상품을 드립니다.</span><span>2022.03.01</span></li>
+                <li><span>렌트 이용시 주의하세요</span><span>2022.03.01</span></li>
+                <li><span>제주도 여행권 할인안내</span><span>2022.03.01</span></li>
+            </ul>
+        </section>
+        <section class="gallary">
+            <h2>갤러리</h2>
+            <div class="images">
+                <a><img src="./image/Contents/gallery1.jpg" alt="국내여행"><span>국내여행 전문, 한국투어</span></a>
+                <a><img src="./image/Contents/gallery2.jpg" alt="해외여행"><span>해외여행 예약, 한국투어</span></a>
+                <a><img src="./image/Contents/gallery3.jpg" alt="렌트카"><span>렌트카 예약, 한국투어</span></a>
+            </div>
+        </section>
+        <section class="go">
+            <h2><a href="#">바로가기</a></h2>
+        </section>
+    </div>
+</div>
+
+<!--푸터-->
+<div class="ftrWrap">
+    <footer>
+        <p>copyright &copy; by webdesign. all right reserved</p>
+        <div class="sns">
+            <ul class="icons">
+                <li> <img src="./image/Footer/sns1.jpg" alt="페이스북"> </li>
+                <li><img src="./image/Footer/sns2.jpg" alt="트위터"></li>
+                <li><img src="./image/Footer/sns3.jpg" alt="인스타그램"></li>
+            </ul>
+            <select name="sitelist" id="sitelist">
+                <option value="">패밀리사이트1</option>
+                <option value="">패밀리사이트2</option>
+                <option value="">패밀리사이트3</option>
+            </select>
+        </div>
+    </footer>
+    <script>
+        const ham = document.querySelector('.ham');
+        const can = document.querySelector('nav>ul');
+        ham.onclick=function(){
+                this.className += ' on';
+        }
+        can.onclick=function(){
+            ham.classList.remove('on');
+        }
+
+
+    </script>
+</div>
+</body>
+</html>
