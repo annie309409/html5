@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        .wrap{
+            display: flex;
+            background-color: #ffcc00;
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+        /*flex grow는 기본 항목제외나머지 공간을 기준으로 항목의 너비를 비율로 표시함*/
+        /*flex shrink는 여백과 관련없이 내용을 기준으로 비율로 표시*/
+        /*basis, grow, shrink는 축약형으로도 작성가능 순서는 grow shrink basis로 정의*/
+        .wrap>div{
+            border: 2px solid black;
+            background-color: #ff0000;
+            /*width: 100px;*/
+            height: 100px;
+            /*flex-shrink: 5;*/
+            /*flex-grow: 1;*/
+            flex: 3 0 0px;
+            /*flex-basis: 100px;*/
+        }
+        .wrap>div.item4{
+            /*flex-shrink: 1;*/
+            flex-grow: 5;
+        }
+        div.gridLay{
+            border: 1px solid black;
+            height: 100vh;
+            width: 80%;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        div.wrap2 main{
+            flow-into: wrap2;
+            width: 50px;
+            height: 30px;
+            background-color: #ff0000;
+        }
+        div.wrap2 aside{
+            flow-into: wrap2;
+            width: 200px;
+            height: 200px;
+            background-color: #cccccc;
+            float: left;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--    <div class="wrap">-->
+<!--        <div class="item1">1</div>-->
+<!--        <div class="item2">2</div>-->
+<!--        <div class="item3">3</div>-->
+<!--        <div class="item4">4</div>-->
+<!--    </div>-->
+<!--    <div class="gridLay"></div>-->
+
+    <h2>grow, basis 적용하기</h2>
+    <div class="wrap2">
+        <header></header>
+        <aside></aside>
+        <main></main>
+        <aside></aside>
+        <footer></footer>
+    </div>
+</body>
+</html>
